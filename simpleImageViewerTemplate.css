@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    margin-top: 40px;
+}
+
+#back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#image-container {
+    margin-top: 0px;
+}
+
+#image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+#image img {
+    max-width: 75%
+}
+
+#previous-button,
+#next-button {
+    padding: 100px 10px;
+}
+
+#next-button {
+    padding-left: 15px;
+}
+
+#caption {
+    margin-top: 40px;
+    font: 80%/1.2em "Trebuchet MS", Trebuchet, Arial, Verdana, Sans-serif;
+    font-size: 13px;
+}
+
+/* Preload */
+#preload-01 {
+    background: url(01.jpg) no-repeat -9999px -9999px;
+}
+
+#preload-02 {
+    background: url(02.jpg) no-repeat -9999px -9999px;
+}
+
+#preload-03 {
+    background: url(03.jpg) no-repeat -9999px -9999px;
+}
+
+#preload-04 {
+    background: url(04.jpg) no-repeat -9999px -9999px;
+}
+
+#preload-05 {
+    background: url(05.jpg) no-repeat -9999px -9999px;
+}
+
+#preload-06 {
+    background: url(06.jpg) no-repeat -9999px -9999px;
+}
+
+#preload-07 {
+    background: url(07.jpg) no-repeat -9999px -9999px;
+}
+
+#preload-08 {
+    background: url(08.jpg) no-repeat -9999px -9999px;
+}
