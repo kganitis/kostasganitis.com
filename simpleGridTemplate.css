@@ -4,7 +4,8 @@
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Make the body take up at least the full height of the viewport */
+    min-height: 100vh;
+    /* Make the body take up at least the full height of the viewport */
     font-family: Palatino, "Palatino Linotype", Baskerville, "Century Schoolbook L", "Times New Roman", serif;
     background-color: #FFFFFF;
     text-align: center;
@@ -46,7 +47,7 @@ h1 {
 
 /* Menu */
 .menu {
-    padding: 20px;
+    padding: 5px;
 }
 
 .menu ul {
@@ -57,12 +58,17 @@ h1 {
 
 .menu ul li {
     display: inline-block;
-    padding: 0 20px;
+    padding: 8px 20px;
     margin: 0 20px;
 }
 
 .menu ul li a {
     font-size: 16px;
+}
+
+.menu ul li.active {
+    background-color: #F0F0F0;
+    border-radius: 5px;
 }
 
 .menu ul li a:hover {
@@ -108,7 +114,8 @@ h1 {
     padding: 10px 20px;
 }
 
-.item, h2 {
+.item,
+h2 {
     flex: 1;
     font-size: 28px;
     font-weight: normal;
@@ -124,6 +131,70 @@ h1 {
 
 h2 {
     flex: 0;
+}
+
+/* Diary Section */
+.diary-container {
+    text-align: left;
+    width: 80%;
+    max-width: 960px;
+    margin: 40px auto;
+}
+
+.post-preview {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.post-thumbnail {
+    flex: 0 0 400px;
+    margin-right: 40px;
+}
+
+.post-thumbnail img {
+    width: 100%;
+    height: auto;
+}
+
+.post-info {
+    flex: 1;
+}
+
+.post-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.post-date {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.post-preview-text {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.read-more-link {
+    display: block;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    float: right;
+}
+
+.read-more-link:hover {
+    background-color: #555;
+}
+
+.post-separator {
+    border-top: 1px solid #ddd;
+    margin: 40px 0;
 }
 
 /* About Section */
@@ -156,7 +227,8 @@ h2 {
 /* Footer Section */
 footer {
     background-color: #FAFAFA;
-    margin-top: auto; /* Push the footer to the bottom */
+    margin-top: auto;
+    /* Push the footer to the bottom */
     padding: 20px 0;
 }
 
@@ -197,16 +269,25 @@ footer {
         padding-top: 0;
     }
 
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .menu ul li {
         display: block;
+        width: 30%;
         padding: 10px 0;
         margin: 0;
     }
 
     .item {
-        flex-basis: 100%; /* Make each item take up the full width on small screens */
-        margin-bottom: 10px; /* Add spacing between the wrapped items */
-      }
+        flex-basis: 100%;
+        /* Make each item take up the full width on small screens */
+        margin-bottom: 10px;
+        /* Add spacing between the wrapped items */
+    }
 }
 
 /* Small Tablets */
@@ -217,6 +298,32 @@ footer {
 
     .thumbnail {
         width: 70%;
+    }
+
+    .diary-container {
+        width: 80%;
+    }
+
+    .post-preview {
+        display: block;
+    }
+
+    .post-thumbnail {
+        flex-basis: 300px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .post-info {
+        text-align: center;
+    }
+
+    .post-preview-text {
+        text-align: justify;
+    }
+
+    .read-more-link {
+        float: none;
     }
 
     .about-container {
