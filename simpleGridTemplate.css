@@ -72,7 +72,7 @@ h1 {
 }
 
 .menu ul li a:hover {
-    color: #7d7d7d
+    color: #7D7D7D
 }
 
 /* Gallery Section */
@@ -80,7 +80,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
 .thumbnail {
@@ -133,14 +133,16 @@ h2 {
 
 h2 {
     flex: 0;
+    margin-bottom: 40px;
 }
 
 /* Diary Section */
 .diary-container {
     text-align: left;
+    align-self: center;
     width: 80%;
     max-width: 960px;
-    margin: 40px auto;
+    margin-bottom: 20px;
 }
 
 .post-preview {
@@ -151,7 +153,7 @@ h2 {
 
 .post-thumbnail {
     flex: 0 0 400px;
-    margin-right: 40px;
+    margin: 20px 40px;
 }
 
 .post-thumbnail img {
@@ -166,39 +168,61 @@ h2 {
 
 .post-title {
     font-size: 18px;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
 .post-date {
     font-size: 14px;
     color: #888;
-    margin-bottom: 5px;
+    margin: 5px 0;
+    align-self: flex-start
 }
 
-.post-preview-text {
-    margin-bottom: 15px;
-    line-height: 1.5;
+.post-text {
+    margin: 10px 0;
+    line-height: 1.6;
     text-align: justify;
 }
 
-.read-more-link {
-    display: block;
+.post-button {
+    text-align: center;
     padding: 8px 16px;
     background-color: #333;
-    color: #fff;
+    color: #FFF;
     text-decoration: none;
     border-radius: 4px;
     transition: background-color 0.3s ease;
-    float: right;
+    margin-top: 10px;
 }
 
-.read-more-link:hover {
+.post-button:hover {
     background-color: #5A5A5A;
 }
 
+.post-info .post-button {
+    display: block;
+    float: right;
+}
+
 .post-separator {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #DDD;
     margin: 40px 0;
+}
+
+.post-image img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.diary-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.diary-post .post-button {
+    display: inline-block;
 }
 
 /* About Section */
@@ -207,7 +231,7 @@ h2 {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 40px;
+    margin-bottom: 20px;
 }
 
 .about-image {
@@ -223,7 +247,7 @@ h2 {
 .about-text {
     flex: 1 1 auto;
     text-align: justify;
-    line-height: 1.5;
+    line-height: 1.6;
     margin: 0 20px;
     max-width: 800px;
 }
@@ -293,14 +317,22 @@ footer {
     }
 }
 
-/* Small Tablets */
+/* Mobile & Small Tablets */
 @media (max-width: 768px) {
+    header {
+        margin-bottom: 20px;
+    }
+
     h1 {
         margin-top: 0;
     }
 
+    h2 {
+        margin-bottom: 20px;
+    }
+
     .thumbnail {
-        width: 70%;
+        width: 80%;
     }
 
     .diary-container {
@@ -312,18 +344,19 @@ footer {
     }
 
     .post-thumbnail {
-        flex-basis: 300px;
-        margin-right: 0;
-        margin-bottom: 20px;
+        margin: 20px 0;
     }
 
     .post-info {
+        display: flex;
+        flex-direction: column;
         text-align: center;
+        align-items: center;
     }
 
-    .read-more-link {
-        float: none;
-    }
+    /* .post-date {
+        align-self: center;
+    } */
 
     .about-container {
         max-width: 100%;
@@ -333,9 +366,7 @@ footer {
     }
 
     .about-image {
-        margin-right: 0;
-        margin-bottom: 20px;
-        text-align: center;
+        margin: 20px 0;
     }
 
     .about-image img {
@@ -348,10 +379,15 @@ footer {
     }
 }
 
+/* Small Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+
+}
+
 /* Small Desktops */
 @media (min-width: 769px) and (max-width: 1199px) {
-    .thumbnail {
-        width: 70%;
+    .post-thumbnail {
+        flex-basis: 300px;
     }
 
     .about-container {
