@@ -80,13 +80,15 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin: 20px 0;
 }
 
 .thumbnail {
     width: 27%;
     margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .thumbnail img {
@@ -205,7 +207,7 @@ h2 {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: 40px;
+    margin: 40px;
 }
 
 .about-image {
@@ -327,7 +329,7 @@ footer {
         max-width: 100%;
         flex-direction: column;
         align-items: center;
-        margin-top: 0;
+        margin: 0;
     }
 
     .about-image {
@@ -337,7 +339,7 @@ footer {
     }
 
     .about-image img {
-        max-width: 50%
+        max-width: 200px;
     }
 
     .about-text {
@@ -353,7 +355,8 @@ footer {
     }
 
     .about-container {
-        margin-top: 0;
+        max-width: 100%;
+        margin: 0 40px;
     }
 
     .about-image img {
