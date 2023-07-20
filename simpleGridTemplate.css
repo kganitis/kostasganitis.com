@@ -26,6 +26,7 @@ header {
 
 .logo {
     padding: 80px 0 40px 0;
+    margin: 0 10px;
     letter-spacing: 4px;
 }
 
@@ -92,7 +93,7 @@ h1 {
 }
 
 .thumbnail img {
-    width: 100%;
+    max-width: 100%;
     border-radius: 5px;
 }
 
@@ -138,27 +139,28 @@ h2 {
 
 /* Journal Section */
 .journal-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     text-align: left;
-    align-self: center;
-    width: 80%;
-    max-width: 960px;
     margin-bottom: 20px;
 }
 
 .entry-preview {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 40px;
+    width: 27%;
+    margin: 20px;
 }
 
 .entry-thumbnail {
-    flex: 0 0 480px;
-    margin: 20px 40px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .entry-thumbnail img {
-    width: 100%;
-    height: auto;
+    max-width: 100%;
     border-radius: 5px;
 }
 
@@ -167,14 +169,14 @@ h2 {
 }
 
 .entry-title {
-    font-size: 18px;
+    font-size: 20px;
     margin: 10px 0;
 }
 
 .entry-date {
     font-size: 14px;
     color: #888;
-    margin: 5px 0;
+    margin: 10px 0;
     align-self: flex-start
 }
 
@@ -192,7 +194,7 @@ h2 {
     text-decoration: none;
     border-radius: 4px;
     transition: background-color 0.3s ease;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .entry-button:hover {
@@ -202,11 +204,6 @@ h2 {
 .entry-info .entry-button {
     display: block;
     float: right;
-}
-
-.entry-separator {
-    border-top: 1px solid #DDD;
-    margin: 40px 0;
 }
 
 .entry-image img {
@@ -303,13 +300,6 @@ footer {
         align-items: center;
     }
 
-    .menu ul li {
-        display: block;
-        width: 30%;
-        padding: 10px 0;
-        margin: 0;
-    }
-
     .item {
         flex-basis: 100%;
         /* Make each item take up the full width on small screens */
@@ -334,28 +324,9 @@ footer {
         width: 80%;
     }
 
-    .journal-container {
+    .entry-preview {
         width: 80%;
     }
-
-    .entry-preview {
-        display: block;
-    }
-
-    .entry-thumbnail {
-        margin: 20px 0;
-    }
-
-    .entry-info {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-    }
-
-    /* .entry-date {
-        align-self: center;
-    } */
 
     .about-container {
         max-width: 100%;
@@ -380,15 +351,26 @@ footer {
 
 /* Small Tablets */
 @media (min-width: 481px) and (max-width: 768px) {
+    .thumbnail {
+        width: 40%;
+    }
 
+    .entry-preview {
+        width: 40%;
+    }
 }
 
 /* Small Desktops */
 @media (min-width: 769px) and (max-width: 1199px) {
-    .entry-thumbnail {
-        flex-basis: 300px;
+    .thumbnail {
+        width: 40%;
     }
 
+    .entry-preview {
+        width: 40%;
+        margin: 20px;
+    }
+    
     .about-container {
         max-width: 100%;
         margin: 0 40px;
